@@ -1,11 +1,13 @@
 name: CI
 on:
-  push: 
-    branches: [ main ]
+  push:
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+
 jobs:
   Lint:
+    runs-on: ubuntu-latest
     # Lint任务
-  UnitTest:
-    # 单元测试任务
+  # UnitTest:
+  # 单元测试任务
