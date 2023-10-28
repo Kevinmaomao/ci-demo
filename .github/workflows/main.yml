@@ -7,7 +7,17 @@ on:
 
 jobs:
   Lint:
-    runs-on: ubuntu-latest
     # Lint任务
-  # UnitTest:
+    # runs-on: ubuntu-latest
+  UnitTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/check
+      - uses: action/setup-go@v2
+        with:
+          version: 7.2.1
+      - name: Install modules
+        run: pnpm Install
+      - name: Run Test
+        run: pnpm run test: run
   # 单元测试任务
